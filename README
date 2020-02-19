@@ -1,0 +1,4 @@
+Use maven project
+Add essential jar files
+ADD dependencies in pom.xml file (Recheck with the version you are using)
+Change Database driver according to your database
