@@ -12,7 +12,7 @@ public class DemoRepositary {
 	
 	public DemoRepositary()
 	{
-		String url="jdbc:mysql://localhost:3306/abc?autoReconnect=true&useSSL=false";
+		String url="jdbc:mysql://localhost:3306/abc?autoReconnect=true&useSSL=false";// intial address mysql
 		String user="root";//Your Username
 		String pass="";//Enter your password
 		try
@@ -29,7 +29,7 @@ public class DemoRepositary {
 	public List<Demo> getDemo()
 	{
 		List<Demo> demo = new ArrayList<>();
-		String query = "select * from trial";
+		String query = "select * from trial";//Write your query
 		try
 		{
 			Statement st = con.createStatement();
@@ -52,7 +52,7 @@ public class DemoRepositary {
 	}
 	public Demo getDemo(int ID)
 	{
-		String query = "select * from trial where id="+ID;
+		String query = "select * from trial where id="+ID;//Write your query
 		Demo a = new Demo();
 		try
 		{
@@ -78,7 +78,7 @@ public class DemoRepositary {
 
 	public void create(Demo a)
 	{
-		String query = "insert into trial values(?,?,?)";
+		String query = "insert into trial values(?,?,?)";//Write your query
 		try
 		{
 			PreparedStatement st = con.prepareStatement(query);
@@ -94,7 +94,7 @@ public class DemoRepositary {
 	}
 	public void update(Demo a)
 	{
-		String query = "Update trial set name =?, points = ? where id =?;";
+		String query = "Update trial set name =?, points = ? where id =?;";//Write your query
 		try
 		{
 			PreparedStatement st = con.prepareStatement(query);
@@ -110,7 +110,7 @@ public class DemoRepositary {
 	}
 	public void delete(int ID)
 	{
-		String query = "Delete from trial where id=?";
+		String query = "Delete from trial where id=?";//Write your query
 		Demo a = new Demo();
 		try
 		{
